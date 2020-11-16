@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+.btn.btn-success.them.cuatau {
+  margin-left: 430px;
+  width: 110px;
+  height: 38px;
+}
+.form-group.search {
+  margin-left: 15px;
+  width: 299px;
+}
+
+input.form-control {
+  margin-left: 14px;
+  width: 300px;
+}
+
+.adduser {
+  position: fixed;
+  top: 85px;
+  z-index: 1;
+  left: 265px;
+}
+
+input.form-control.nhapvao {
+  width: 600px;
+}
+
+select.form-control.selcet {
+  width: 601px;
+  margin-left: 13px;
+}
+button.btn.btn-danger.cancle {
+  width: 95px;
+}
+label.label_input {
+  width: 109px;
+}
+input.form-control-file {
+  margin-left: 44px;
+}
+.col-12.side-menu {
+  margin-top: 50px;
+}
