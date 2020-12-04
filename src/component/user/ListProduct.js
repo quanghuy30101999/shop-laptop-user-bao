@@ -34,10 +34,7 @@ class ListProduct extends Component {
     }
     render() {
         console.log(this.props.products);
-        const cart_id=0;
-        if(localStorage.getItem('data_user') !==null){
-            cart_id=JSON.parse(localStorage.getItem('data_user')).user.cart.id;
-        }
+        
         return (
                  <div className="container card card-block col-sm-8" id="noidung">
                     <div className="row dssanpham col-sm-12">
@@ -54,7 +51,7 @@ class ListProduct extends Component {
                                         <div className="card-block ttsp">
                                          <a href="/" className="tdspkhac">{x.name}</a>
                                         <b>{x.price}đ</b>
-                                        <div className="btn btn-outline-info btn-block addCart" onClick={()=>this.datHang(x.id,x.name,x.price,cart_id)}>Thêm vào giỏ hàng</div>
+                                        <div className="btn btn-outline-info btn-block addCart" onClick={()=>this.datHang(x.id,x.name,x.price,JSON.parse(localStorage.getItem('data_user')).user.cart.id)}>Thêm vào giỏ hàng</div>
                                         </div>
                                     </div>
                                 </div>
@@ -62,8 +59,6 @@ class ListProduct extends Component {
                             }
                             )
                         }
-                        
-                        
                     </div>
                     </div>
                 </div>

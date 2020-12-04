@@ -86,7 +86,7 @@ class Header extends Component {
                     </div>
                     <Link className="cart" to="/shoppingCart">
                         <i className="fa fa-shopping-cart"> Giỏ hàng</i>
-                        <span className="soluong">0</span>
+            <span className="soluong">{this.props.soluong}</span>
                     </Link>
                 </div>
             </div>
