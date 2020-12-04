@@ -3,17 +3,12 @@ import React, { Component } from 'react';
 import Menu from './Menu';
 import DieuhuongURL from '../router/DieuhuongURL';
 import { BrowserRouter} from 'react-router-dom';
+import Header from './user/home/Header';
 class App extends Component {
   render() {
     return (
         <BrowserRouter >
-        <div className="row">
-          <div className="col-2">
-            <Menu />
-          </div>
           <DieuhuongURL />
-
-        </div>
         </BrowserRouter >
     );
   }

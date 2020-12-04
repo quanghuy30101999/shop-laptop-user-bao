@@ -22,16 +22,9 @@ class AddUser extends Component {
       .catch(error => console.log(error));
 }
       setTrangThai  = () =>{
-      if(this.state.trangThaiChinhSua ===false){
-        this.setState({
-          trangThaiChinhSua : true
-        })
-      }
-      else{
-        this.setState({
-          trangThaiChinhSua : false
-        })
-      }
+      this.setState({
+        trangThaiChinhSua: !this.state.trangThaiChinhSua
+      })
       }
       isChange = (e) =>{
         const name =e.target.name;
@@ -44,9 +37,9 @@ class AddUser extends Component {
       
       
       isFileChange = (e) =>{
-        const value=e.target.files
+        const value=e
         this.setState({
-         picture : {url : value}
+         picture : value
         })
         console.log(value)
       }

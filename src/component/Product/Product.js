@@ -17,13 +17,21 @@ class Product extends Component {
       .catch(error => console.log(error));
 }
   findProduct(e){
-    axios.get(`https://shop-laptop-2020.herokuapp.com/v1/products/${e}`)
-    .then(res => {
-      const persons = res.data;
-      this.setState({persons : persons.data})
-    })
-    .catch(error => console.log(error));
+    axios.get(`https://shop-laptop-2020.herokuapp.com/v1/products`,
+                    {
+                        params: {
+                            search: e
+                        }
+                    }
+                )
+                .then(res => {
+                  const persons = res.data;
+                  this.setState({persons : persons.data})
+                  console.log(persons);
+                })
   }
+
+
 componentDidMount(){
   this.getProduct();
 }

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import AddUser from './AddUser';
 
 class SearchForm extends Component {
-  a={};
+
   isChange = (e) =>{
-    this.a =e.target.value;
-    console.log(this.a);
+
+    this.props.findProduct(e.target.value)
   }
     render() {
         return (
