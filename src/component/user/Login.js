@@ -33,6 +33,7 @@ class Login extends Component {
         }).then(res => {
             localStorage.setItem('token', JSON.stringify(res.data['token']))
             localStorage.setItem('idUser', JSON.stringify(res.data['user'].id))
+            localStorage.setItem('data_user', JSON.stringify(res.data))
             this.setState({
                 isRed : true
             })

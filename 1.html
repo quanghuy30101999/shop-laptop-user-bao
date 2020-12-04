@@ -5,31 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="reset.css/reset.css">
+    <link rel="stylesheet" href="reset.css/reset.css">b4
 </head>
 <body>
-    <div class="header">
-        <div class="up">
-            <a href="" class="user">
-                <span>Hi, A.bao</span>
-                <i class="fa fa-user-circle"></i>
-            </a>
-        </div>
-        <div class="bottom">
-            <a href="/" class="trai">
-                <i class="fa fa-home"></i>
-                <span>BKLaptop</span>
-            </a>
-            <div class="search">
-                <input type="text" placeholder="Nhập từ khóa cần tìm" class="txtSearch">
-                <a href=""><i class="fa fa-search"></i></a>
-            </div>
-            <a href="" class="cart">
-                <i class="fa fa-shopping-cart"> Giỏ hàng</i>
-                <span class="soluong"> 0</span>
-            </a>
-        </div>
-    </div>
+    <div class="container pt-2 card card-block col-sm-8" id="noidung">
+		<div class="row tieude col-sm-12">
+			<div class="">
+				<a href="" style="color:blue"> < Mua thêm sản phẩm khác</a>
+			</div>
+			<div class="" style="margin-left:480px;">
+				Giỏ hàng của bạn
+			</div>
+		</div>
+		<hr>
+		<div class="row dssanpham col-sm-12">
+				<div class="card card-block">
+					<div class="row motsanpham">
+						<div class="col-sm-3">
+							<img src="images/1.jpg" alt="" class="img-fluid myimage">
+							<div class="btn-group pt-2">
+								<div class="btn btn-outline-danger xoasp" style="margin-left:40px;">Delete</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<a href="" class="tieude">Apple Macbook Air 2020 - 13 Inchs (i3-10th/ 8GB/ 256GB) - Gold</a>
+							<div class="noidungsp " style="font-weight: bold;">
+								Balo laptop 13"3 inch Tucano WOV-MB133 <br>
+								Giam giá 1.000.000đ <br>
+								Pin sạc dự phòng giảm 30% khi mua kèm <br>
+								Mua kèm microfosft 365 Personal giá chỉ 690.00đ <br>
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<div class="gia1">129.000đ</div>
+							<div class="badge badge-danger">-12%</div>
+						</div>
+						<div class="col-sm-3">
+							<input type="number" name="" id="" class="soluongsp" min="1" value="1">
+			
+						</div>
+					</div>
+					<!-- hết 1 sản phẩm -->
+					<div class="row motsanpham">
+						<div class="col-sm-3">
+							<img src="images/1.jpg" alt="" class="img-fluid myimage">
+							<div class="btn-group pt-2">
+								<div class="btn btn-outline-danger xoasp" style="margin-left:40px;">Delete</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<a href="" class="tieude">Apple Macbook Air 2020 - 13 Inchs (i3-10th/ 8GB/ 256GB) - Gold</a>
+							<div class="noidungsp " style="font-weight: bold;">
+								Balo laptop 13"3 inch Tucano WOV-MB133 <br>
+								Giam giá 1.000.000đ <br>
+								Pin sạc dự phòng giảm 30% khi mua kèm <br>
+								Mua kèm microfosft 365 Personal giá chỉ 690.00đ <br>
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<div class="gia1">129.000đ</div>
+							<div class="badge badge-danger">-12%</div>
+						</div>
+						<div class="col-sm-3">
+							<input type="number" name="" id="" class="soluongsp" min="1" value="1">
+			
+						</div>
+					</div>
+				</div>
+			
+				<div class="col-sm-12" id="tinhgia">
+					<div class="divtrang card card-block">
+						<div class="dongtinhgia">
+							<div class="phai float-xs-right">453.000đ</div>
+							<div class="trai">Tạm tính</div>
+						</div>
+						<div class="thanhtien">
+							<div class="phai float-xs-right">
+								<div class="todo">453.000đ</div>
+								<div class="gom">(Đã bao gồm VAT nếu có)</div>
+							</div>
+							<div class="trai">Thành tiền</div>
+						</div>
+					</div>
+					<a href="#" class="btn btn-block btn-danger">Tiến hành đặt hàng</a>
+				</div>
+
+				<div class="row sanphamkhac">
+					<div class="col-sm-12 py-2">
+						<h3 class="tdto">Sản phẩm khác</h3>
+					</div>
+					<div class="col-sm-4">
+						<div class="card">
+							<img src="images/1.jpg" alt="" class="img-fluid">
+							<div class="card-block">
+								<a href="" class="tdspkhac">Apple Macbook Air 2020 - 13 Inchs (i3-10th/ 8GB/ 256GB) - Gold</a>
+								<p class="card-text mota">Sản phẩm của apple</p>
+								<b>129.000đ</b>
+								<a href="#" class="btn btn-outline-info btn-block">Mua ngay</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="card">
+							<img src="images/1.jpg" alt="" class="img-fluid">
+							<div class="card-block">
+								<a href="" class="tdspkhac">Apple Macbook Air 2020 - 13 Inchs (i3-10th/ 8GB/ 256GB) - Gold</a>
+								<p class="card-text mota">Sản phẩm của apple</p>
+								<b>129.000đ</b>
+								<a href="#" class="btn btn-outline-info btn-block">Mua ngay</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="card">
+							<img src="images/1.jpg" alt="" class="img-fluid">
+							<div class="card-block">
+								<a href="" class="tdspkhac">Apple Macbook Air 2020 - 13 Inchs (i3-10th/ 8GB/ 256GB) - Gold</a>
+								<p class="card-text mota">Sản phẩm của apple</p>
+								<b>129.000đ</b>
+								<a href="#" class="btn btn-outline-info btn-block">Mua ngay</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			<!-- Hết cột trái -->
+			
+		</div>
+	</div>
 </body>
 </html>

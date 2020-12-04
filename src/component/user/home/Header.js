@@ -84,10 +84,10 @@ class Header extends Component {
                     <input type="text" placeholder="Nhập từ khóa cần tìm" className="txtSearch" />
                     <a href="/"><i className="fa fa-search" /></a>
                     </div>
-                    <a href="/" className="cart">
-                    <i className="fa fa-shopping-cart"> Giỏ hàng</i>
-                    <span className="soluong">0</span>
-                    </a>
+                    <Link className="cart" to="/shoppingCart">
+                        <i className="fa fa-shopping-cart"> Giỏ hàng</i>
+                        <span className="soluong">0</span>
+                    </Link>
                 </div>
             </div>
 

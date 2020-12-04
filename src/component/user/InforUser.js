@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 class InforUser extends Component {
+
     constructor(props) {
         super(props);
         this.state={
             user : {},
+            data: {},
             updatePass : false,
             msgUpdatePass : ''
         }
@@ -14,20 +16,21 @@ class InforUser extends Component {
         const name=e.target.name;
         const value=e.target.value;
         this.setState({
-            [name] : value
+            data :{[name] : value}
         })
     }
     updateUser(id){
         axios({
             method: 'PUT',
             url: 'https://shop-laptop-2020.herokuapp.com/v1/users/'+`${id}`,
-            data: this.state,
+            data: this.state.data,
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': JSON.parse(localStorage.getItem('token'))
             }
           }).then( res =>{
               console.log(res.status);
+              console.log(res);
             this.setState({
                 isRed : true
             })
@@ -90,19 +93,19 @@ class InforUser extends Component {
                         <div className="card-body carbd">
                         <div classname="btn-group mb-4">
                             <label classname="label_input lbInforUser" htmlfor>Tên :</label>
-                            <input type="text" onChange={(e)=>this.isChange(e)} classname="form-control nhapvao" defaultValue={this.state.user.name}  />
+                            <input type="text" onChange={(e)=>this.isChange(e)} classname="form-control nhapvao" name="name" defaultValue={this.state.user.name}  />
                         </div>
                         <div classname="btn-group mb-4">
                             <label classname="label_input lbInforUser" htmlfor>Số điện thoại :</label>
-                            <input type="text" onChange={(e)=>this.isChange(e)} classname="form-control nhapvao" defaultValue={this.state.user.phone}  />
+                            <input type="text" onChange={(e)=>this.isChange(e)} classname="form-control nhapvao" name="phone" defaultValue={this.state.user.phone}  />
                         </div>
                         <div classname="btn-group mb-4">
                             <label classname="label_input lbInforUser" htmlfor>Email :</label>
-                            <input type="text" onChange={(e)=>this.isChange(e)} classname="form-control nhapvao" defaultValue={this.state.user.email}  />
+                            <input type="text" onChange={(e)=>this.isChange(e)} classname="form-control nhapvao" name="email" defaultValue={this.state.user.email}  />
                         </div>
                         <div classname="btn-group mb-4">
                             <label classname="label_input lbInforUser" htmlfor>Địa chỉ :</label>
-                            <input type="textarea" onChange={(e)=>this.isChange(e)} classname="form-control nhapvao" defaultValue={this.state.user.address}  />
+                            <input type="textarea" onChange={(e)=>this.isChange(e)} classname="form-control nhapvao" name="address" defaultValue={this.state.user.address}  />
                         </div>
                         <div classname="btn-group mb-4">
                             <label classname="label_input lbInforUser" htmlfor>Password :</label>
