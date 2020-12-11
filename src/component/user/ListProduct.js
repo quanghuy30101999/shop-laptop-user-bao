@@ -44,10 +44,11 @@ class ListProduct extends Component {
                         </div>
                         {
                             this.props.products.map((x,y)=>{
+                                let img=`https://shop-laptop-2020.herokuapp.com/${x.picture.url}`
                                 return(
                                 <div className="col-sm-4 mb-2 motsp" key={y}>
                                     <div className="card ">
-                                        <img src="images/1.jpg" alt="" className="img-fluid myimamge" />
+                                        <img src={img} alt="" className="img-fluid myimamge" />
                                         <div className="card-block ttsp">
                                          <a href="/" className="tdspkhac">{x.name}</a>
                                         <b>{x.price}đ</b>

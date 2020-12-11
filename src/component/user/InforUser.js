@@ -8,11 +8,30 @@ class InforUser extends Component {
             user : {},
             data: {},
             updatePass : false,
-            msgUpdatePass : ''
+            msgUpdatePass : '',
+            old_password: '',
+            new_password: ''
         }
     }
 
+    set_old_password(e){
+        e.preventDefault();
+        this.setState({
+            old_password : e.target.value
+        })
+    }
+    set_new_password(e){
+        e.preventDefault();
+        this.setState({
+            new_password : e.target.value
+        })
+    }
+
+
+
     isChange = (e) =>{
+        console.log(e.target.name)
+        console.log(e.target.value)
         const name=e.target.name;
         const value=e.target.value;
         this.setState({
@@ -38,6 +57,7 @@ class InforUser extends Component {
           console.log(id);
     }
     updatePass(id){
+        console.log(this.state);
         axios({
             method: 'PATCH',
             url: 'https://shop-laptop-2020.herokuapp.com/v1/users/'+`${id}` +'/password',
@@ -125,8 +145,8 @@ class InforUser extends Component {
                     <div className="card border-primary ">
                         <div className="card-header text-center">Thay đổi mật khẩu</div>
                         <div className="card-body ">
-                        <input onChange={(e)=>this.isChange(e)} type="password" className="form-control mb-4" name="old_password" placeholder="Mật khẩu cũ" />
-                        <input onChange={(e)=>this.isChange(e)} type="password" className="form-control mb-4" name="new_password" placeholder="Mật khẩu mới" />
+                        <input onChange={(e)=>this.set_old_password(e)} type="password" className="form-control mb-4" name="old_password" placeholder="Mật khẩu cũ" />
+                        <input onChange={(e)=>this.set_new_password(e)} type="password" className="form-control mb-4" name="new_password" placeholder="Mật khẩu mới" />
                         <input onChange={(e)=>this.isChange(e)} type="password" className="form-control " name="confim_password" placeholder="Nhập lại mật khẩu mới" />
                         </div>
                         <div className="btn btn-block btn-danger dn mb-2" onClick={()=>this.updatePass(this.state.user.id)}>Xác nhận</div>
